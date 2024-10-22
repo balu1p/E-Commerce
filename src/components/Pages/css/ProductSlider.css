@@ -1,0 +1,3 @@
+.slick-next::before {
+    content: none;
+}

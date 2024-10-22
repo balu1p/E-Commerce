@@ -1,0 +1,99 @@
+.horizontal-sec {
+  padding: 20px 28px;
+  overflow: hidden;
+}
+
+.horizontal-sec .swiper {
+  padding: 0 40px;
+}
+
+.horizontal-sec .swiper-slide {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-right: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center;
+}
+
+.horizontal-sec .swiper-slide:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide-inner {
+  position: relative;
+  width: 100%;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.swiper-slide-inner img {
+  height: 70%;
+  width: 70%;
+  object-fit: contain;
+  transition: opacity 0.3s ease;
+}
+
+
+@media (max-width: 768px) {
+  .swiper-slide-inner {
+    height: 200px; /* Slightly smaller height for tablets */
+  }
+}
+
+/* Mobile View (480px and below) */
+@media (max-width: 480px) {
+  .swiper-slide-inner {
+    height: 180px; /* Smaller height for mobile devices */
+  }
+}
+
+.swiper-slide:hover img {
+  opacity: 0.7;
+}
+
+.swiper-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.swiper-slide:hover .swiper-overlay {
+  opacity: 1;
+}
+
+.swiper-overlay span {
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.2rem;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: #b9b8b8;
+  opacity: 0.7;
+  text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  scale: 1;
+  transition: opacity 0.3s ease, scale 0.3s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
+  scale: 1.2;
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
